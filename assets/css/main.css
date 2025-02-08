@@ -4008,6 +4008,14 @@ input, select, textarea {
     border-radius: 10px;
 }
 
+/* Centering the Download CV Button */
+.cv-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Adds spacing */
+}
+
+
 
 /* Contact Section Styling */
 .contact-info {
