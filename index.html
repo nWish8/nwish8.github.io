@@ -42,11 +42,7 @@
 							<h2>Nick Wishart</h2>
 							<p>Electrical & Electronic Engineer<br />
 							Deck/Engineer | Yacht Crew<br />
-							 <br />
-							Experienced with Electrical systems and technical problem solving.</p>
-							<ul class="actions special">
-								<li><a href="#cv" class="button primary">View CV</a></li>
-							</ul>
+							 <br /></p>
 						</div>
 						<a href="#about" class="more scrolly">About Me</a>
 					</section>
@@ -56,7 +52,7 @@
 						<div class="inner">
 							<header class="major">
 								<h2>My CV</h2>
-								<p>View or download my latest CV below.</p>
+								<p>Download and view my latest CV below.</p>
 							</header>
 							<ul class="actions">
 								<li><a href="CV_Nick.pdf" download class="button primary">Download CV</a></li>
@@ -93,53 +89,26 @@
 						</section>
 					</section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-							</header>
-							<ul class="features">
-								<li class="icon fa-paper-plane">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon solid fa-headphones-alt">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
+				<!-- Contact -->
+					<section id="contact" class="wrapper style4">
 						<div class="inner">
 							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+								<h2>Get in Touch</h2>
+								<p>Feel free to contact me via email or phone. Click the buttons to copy my details.</p>
 							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
+
+							<div class="contact-info">
+								<p>Email: <span id="email">nick98w@gmail.com</span> 
+									<button class="copy-btn" onclick="copyToClipboard('email')">Copy</button>
+								</p>
+								<p>Phone: <span id="phone">+27 61 077 1194</span> 
+									<button class="copy-btn" onclick="copyToClipboard('phone')">Copy</button>
+								</p>
+							</div>
+
+							<ul class="actions">
+								<li><a href="mailto:nick98w@gmail.com" class="button primary">Email Me</a></li>
+								<li><a href="tel:+27610771194" class="button">Call Me</a></li>
 							</ul>
 						</div>
 					</section>
@@ -168,6 +137,16 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				function copyToClipboard(id) {
+					const text = document.getElementById(id).innerText;
+					navigator.clipboard.writeText(text).then(() => {
+						alert(id.charAt(0).toUpperCase() + id.slice(1) + " copied to clipboard!");
+					});
+				}
+			</script>
+			
 
 	</body>
 </html>
