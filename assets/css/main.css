@@ -4017,32 +4017,21 @@ input, select, textarea {
 
 
 
-/* Contact Section Styling */
-.contact-info {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
+/* Contact Info Styling */
 .contact-info p {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-.copy-btn {
-    background: #ffcc00;
-    border: none;
-    padding: 5px 10px;
+/* Make links stand out */
+.contact-info a {
+    text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+    color: #ffcc00;
+    transition: color 0.3s ease;
 }
 
-.copy-btn:hover {
-    background: #ffaa00;
+.contact-info a:hover {
+    color: #ffaa00;
 }
+

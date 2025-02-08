@@ -93,15 +93,15 @@
 						<div class="inner">
 							<header>
 								<h2>Get in Touch</h2>
-								<p>Feel free to contact me via email or phone. Click the buttons to copy my details.</p>
+								<p>Feel free to contact me via email or phone. Click the links to copy my details.</p>
 							</header>
 
 							<div class="contact-info">
-								<p>Email: <span id="email">nick98w@gmail.com</span> 
-									<button class="copy-btn" onclick="copyToClipboard('email')">Copy</button>
+								<p>Email: 
+									<a href="mailto:nick98w@gmail.com" onclick="copyToClipboard('nick98w@gmail.com')">nick98w@gmail.com</a>
 								</p>
-								<p>Phone: <span id="phone">+27 61 077 1194</span> 
-									<button class="copy-btn" onclick="copyToClipboard('phone')">Copy</button>
+								<p>Phone: 
+									<a href="tel:+27610771194" onclick="copyToClipboard('+27610771194')">+27 61 077 1194</a>
 								</p>
 							</div>
 
@@ -111,6 +111,7 @@
 							</ul>
 						</div>
 					</section>
+
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -138,13 +139,13 @@
 			<script src="assets/js/main.js"></script>
 
 			<script>
-				function copyToClipboard(id) {
-					const text = document.getElementById(id).innerText;
+				function copyToClipboard(text) {
 					navigator.clipboard.writeText(text).then(() => {
-						alert(id.charAt(0).toUpperCase() + id.slice(1) + " copied to clipboard!");
+						alert(text + " copied to clipboard!");
 					});
 				}
 			</script>
+			
 			
 
 	</body>
