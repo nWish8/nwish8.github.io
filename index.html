@@ -59,11 +59,16 @@
 									<a href="CV_Nick.pdf" download class="button primary">Download CV</a>
 								</div>
 							</header>
-							<div class="cv-container">
+							<div class="cv-container desktop-only">
+								<iframe src="CV_Nick.pdf" width="100%" height="1200px"></iframe>
+							</div>
+							
+							<div class="cv-container mobile-only">
 								<iframe src="https://docs.google.com/gview?url=https://nwish8.github.io/CV_Nick.pdf&embedded=true"
-									style="width:100%; height:1200px;" frameborder="0">
+									style="width:100%; height:400px;" frameborder="0">
 								</iframe>
 							</div>
+							
 							
 						</div>
 					</section>
@@ -152,6 +157,21 @@
 						alert(text + " copied to clipboard!");
 					});
 				}
+			</script>
+			
+			<script>
+				function detectDevice() {
+					if (window.innerWidth <= 768) {
+						document.querySelector('.desktop-only').style.display = 'none';
+						document.querySelector('.mobile-only').style.display = 'block';
+					} else {
+						document.querySelector('.desktop-only').style.display = 'block';
+						document.querySelector('.mobile-only').style.display = 'none';
+					}
+				}
+			
+				window.onload = detectDevice;
+				window.onresize = detectDevice;
 			</script>
 			
 			

@@ -4008,6 +4008,23 @@ input, select, textarea {
     border-radius: 10px;
 }
 
+/* Hide mobile view on larger screens */
+.mobile-only {
+    display: none;
+}
+
+/* Hide desktop view on smaller screens */
+@media screen and (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+}
+
+
+
 /* Centering the Download CV Button */
 .cv-button-container {
     display: flex;
