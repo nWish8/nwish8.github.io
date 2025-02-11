@@ -164,18 +164,32 @@
 			
 			<script>
 				function detectDevice() {
+					let desktopContainer = document.querySelector('.desktop-only');
+					let mobileContainer = document.querySelector('.mobile-only');
+					let mobileIframe = document.querySelector('.mobile-only iframe');
+			
 					if (window.innerWidth <= 768) {
-						document.querySelector('.desktop-only').style.display = 'none';
-						document.querySelector('.mobile-only').style.display = 'block';
+						desktopContainer.style.display = 'none';
+						mobileContainer.style.display = 'block';
+			
+						// Force iframe to reload if it fails to load immediately
+						setTimeout(() => {
+							if (!mobileIframe.src.includes('gview')) {
+								mobileIframe.src = mobileIframe.src; // Reloads the iframe
+							}
+						}, 1000);
 					} else {
-						document.querySelector('.desktop-only').style.display = 'block';
-						document.querySelector('.mobile-only').style.display = 'none';
+						desktopContainer.style.display = 'block';
+						mobileContainer.style.display = 'none';
 					}
 				}
 			
+				// Ensure script runs only when the DOM is fully loaded
+				document.addEventListener("DOMContentLoaded", detectDevice);
 				window.onload = detectDevice;
 				window.onresize = detectDevice;
 			</script>
+			
 			
 			
 
