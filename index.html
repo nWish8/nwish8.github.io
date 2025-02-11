@@ -166,18 +166,18 @@
 				function detectDevice() {
 					let desktopContainer = document.querySelector('.desktop-only');
 					let mobileContainer = document.querySelector('.mobile-only');
-					let mobileIframe = document.querySelector('.mobile-only iframe');
 			
 					if (window.innerWidth <= 768) {
 						desktopContainer.style.display = 'none';
 						mobileContainer.style.display = 'block';
 			
-						// Force iframe to reload if it fails to load immediately
-						setTimeout(() => {
-							if (!mobileIframe.src.includes('gview')) {
-								mobileIframe.src = mobileIframe.src; // Reloads the iframe
-							}
-						}, 1000);
+						// Check if the page has been refreshed already
+						if (!sessionStorage.getItem("pageReloaded")) {
+							sessionStorage.setItem("pageReloaded", "true");
+							setTimeout(() => {
+								location.reload();
+							}, 2000); // Refresh after 2 seconds
+						}
 					} else {
 						desktopContainer.style.display = 'block';
 						mobileContainer.style.display = 'none';
@@ -189,6 +189,7 @@
 				window.onload = detectDevice;
 				window.onresize = detectDevice;
 			</script>
+			
 			
 			
 			
