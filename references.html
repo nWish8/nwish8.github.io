@@ -1,72 +1,90 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>References | Nick Wishart</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="icon" type="image/png" href="assets/images/anchor.png">
-	</head>
-	<body>
-		<!-- Page Wrapper -->
-		<div id="page-wrapper">
+    <head>
+        <title>References | Nick Wishart</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="icon" type="image/png" href="assets/images/anchor.png">
+    </head>
+    <body>
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
 
-			<!-- Header -->
-			<header id="header">
-				<h1><a href="index.html">Nick Wishart</a></h1>
-				<nav id="nav">
-					<ul>
-						<li class="special">
-							<a href="#menu" class="menuToggle"><span>Menu</span></a>
-							<div id="menu">
-								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="references.html">References</a></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</nav>
-			</header>
+            <!-- Header -->
+            <header id="header">
+                <h1><a href="index.html">Nick Wishart</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li class="special">
+                            <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                            <div id="menu">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="references.html">References</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-			<!-- References Section -->
-			<section id="references" class="wrapper style1">
-				<div class="inner">
-					<header class="major">
-						<h2>References</h2>
-						<p>Below are references from colleagues and supervisors who can vouch for my work.</p>
-					</header>
-					
-					<div class="content">
-						<h3>Reference 1</h3>
-						<p><strong>Frances A. Mansfield</strong><br />
-						Director, Odyssey Sailing .Gr<br />
-						Email: info@odysseysailing.gr<br />
-						Phone: +30 6974659156</p>
+            <!-- References Section -->
+            <section id="references" class="wrapper style1">
+                <div class="inner">
+                    <header class="major">
+                        <h2>References</h2>
+                        <p>Below are references from colleagues and supervisors who can vouch for my work.</p>
+                    </header>
+                    
+                    <div class="content">
+                        <h3>Reference 1</h3>
+                        <p><strong>Frances A. Mansfield</strong><br />
+                        Director, Odyssey Sailing .Gr<br />
+                        Email: info@odysseysailing.gr<br />
+                        Phone: +30 6974659156</p>
+                        <a href="assets/references/frances_mansfield.pdf" download class="button primary">Download Letter</a>
 
                         <h3>Reference 2</h3>
-						<p><strong>Alexander Greig</strong><br />
-						Owner, Cape Mushrooms<br />
-						Email: greig@capemushrooms.co.za<br />
-						Phone: +27 82 622 8889</p>
+                        <p><strong>Alexander Greig</strong><br />
+                        Owner, Cape Mushrooms<br />
+                        Email: greig@capemushrooms.co.za<br />
+                        Phone: +27 82 622 8889</p>
+                        <a href="assets/references/alexander_greig.pdf" download class="button primary">Download Letter</a>
 
-						<h3>Reference 3</h3>
-						<p><strong>Gabriel Bruwer</strong><br />
-						R&D Manager, Sinapi Biomedical<br />
-						Email: gabrielb@sinapibiomedical.com<br />
-					</div>
-				</div>
-			</section>
+                        <h3>Reference 3</h3>
+                        <p><strong>Gabriel Bruwer</strong><br />
+                        R&D Manager, Sinapi Biomedical<br />
+                        Email: gabrielb@sinapibiomedical.com<br />
+                        </p>
+                        <a href="assets/references/gabriel_bruwer.pdf" download class="button primary">Download Letter</a>
+                    </div>
+                </div>
+            </section>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://www.yotspot.com/user-profile/157232.html?pass=ph3zn3yo" target="_blank" class="icon solid fa-anchor"><span class="label">Yotspot</span></a></li>
-					<li><a href="mailto:nick98w@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			</footer>
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href="https://www.yotspot.com/user-profile/157232.html?pass=ph3zn3yo" target="_blank" class="icon solid fa-anchor"><span class="label">Yotspot</span></a></li>
+                    <li><a href="mailto:nick98w@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </footer>
 
-		</div>
-	</body>
+        </div>
+
+        <!-- Menu Toggle Script -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var menuToggle = document.querySelector(".menuToggle");
+                var menu = document.getElementById("menu");
+
+                menuToggle.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    menu.classList.toggle("active");
+                });
+            });
+        </script>
+
+    </body>
 </html>
