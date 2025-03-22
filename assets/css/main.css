@@ -2534,6 +2534,18 @@ input, select, textarea {
 
 		}
 
+/* Make small buttons the same color as primary buttons */
+.button.small {
+    background-color: #ed4933; /* Same background color as primary button */
+    color: #ffffff; /* Same text color as primary button */
+    box-shadow: none; /* Remove any shadow */
+}
+
+/* Optional: Add hover effect for small buttons */
+.button.small:hover {
+    background-color: #ef5e4a; /* Same hover color as primary button */
+}
+
 /* Features */
 
 	.features {
