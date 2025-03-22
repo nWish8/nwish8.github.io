@@ -4,7 +4,7 @@
         <script>
             function checkPassword() {
                 // Check if the user is already authenticated
-                if (sessionStorage.getItem("authenticated") !== "true") {
+                //if (sessionStorage.getItem("authenticated") !== "true") {
                     // Prompt for the password
                     let password = prompt("Enter password to view this page:");
                     if (password === "0000") {
@@ -15,7 +15,7 @@
                         alert("Incorrect password! Redirecting to home page.");
                         window.location.href = "index.html";
                     }
-                }
+                //}
             }
 
             // Run the password check before the page loads
