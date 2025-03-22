@@ -4063,3 +4063,12 @@ input, select, textarea {
     margin-top: 20px;
 }
 
+#certificates ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+}
+
+#certificates ul li {
+    margin-bottom: 10px; /* Optional: Adds spacing between list items */
+}
