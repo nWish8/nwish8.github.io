@@ -74,5 +74,19 @@
                 </ul>
             </footer>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var menuToggle = document.querySelector(".menuToggle");
+                var menu = document.getElementById("menu");
+        
+                menuToggle.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    menu.classList.toggle("active");
+                });
+            });
+        </script>
+        
+
     </body>
 </html>
