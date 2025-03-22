@@ -4052,3 +4052,14 @@ input, select, textarea {
     color: #ffaa00;
 }
 
+
+#references .content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#references h3 {
+    margin-top: 20px;
+}
+
