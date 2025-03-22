@@ -1,6 +1,22 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <script>
+            function checkPassword() {
+                if (sessionStorage.getItem("authenticated") !== "true") {
+                    let password = prompt("Enter password to view this page:");
+                    if (password === "0000") {
+                        sessionStorage.setItem("authenticated", "true");
+                    } else {
+                        alert("Incorrect password! Redirecting to home page.");
+                        window.location.href = "index.html"; 
+                    }
+                }
+            }
+        
+            window.onload = checkPassword;
+        </script>
+        
         <title>Certificates | Nick Wishart</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
