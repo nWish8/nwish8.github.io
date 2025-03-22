@@ -75,16 +75,49 @@
             </footer>
         </div>
 
+		<!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var menuToggle = document.querySelector(".menuToggle");
-                var menu = document.getElementById("menu");
-        
-                menuToggle.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    menu.classList.toggle("active");
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert(text + " copied to clipboard!");
                 });
-            });
+            }
+        </script>
+        
+        <script>
+            function detectDevice() {
+                let desktopContainer = document.querySelector('.desktop-only');
+                let mobileContainer = document.querySelector('.mobile-only');
+        
+                if (window.innerWidth <= 768) {
+                    desktopContainer.style.display = 'none';
+                    mobileContainer.style.display = 'block';
+        
+                    // Check if the page has been refreshed already
+                    if (!sessionStorage.getItem("pageReloaded")) {
+                        sessionStorage.setItem("pageReloaded", "true");
+                        setTimeout(() => {
+                            location.reload();
+                        }, 5000); // Refresh after 2 seconds
+                    }
+                } else {
+                    desktopContainer.style.display = 'block';
+                    mobileContainer.style.display = 'none';
+                }
+            }
+        
+            // Ensure script runs only when the DOM is fully loaded
+            document.addEventListener("DOMContentLoaded", detectDevice);
+            window.onload = detectDevice;
+            window.onresize = detectDevice;
         </script>
         
 
