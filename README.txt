@@ -8,6 +8,5 @@ Open `index.html` in your browser or serve the folder with any static web server
 ## Credits
 - Spectral theme by [HTML5 UP](https://html5up.net)
 - Icons from [Font Awesome](https://fontawesome.com)
-- Demo images from [Unsplash](https://unsplash.com)
 
 The original theme is licensed under the Creative Commons Attribution 3.0 License. See `LICENSE.txt` for details.
