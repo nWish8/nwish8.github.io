@@ -11,6 +11,68 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
                <link rel="icon" type="image/png" href="images/anchor.png">
+    <!-- Add Google Fonts for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add a subtle animated background and modern styles -->
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(120deg, #232526 0%, #414345 100%);
+            min-height: 100vh;
+            color: #f3f3f3;
+        }
+        #banner {
+            background: linear-gradient(120deg, #ed4933 0%, #232526 100%);
+            color: #fff;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2);
+            border-radius: 0 0 40px 40px;
+            animation: bannerFadeIn 1.2s ease;
+        }
+        @keyframes bannerFadeIn {
+            from { opacity: 0; transform: translateY(-40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .button.primary, .button.small {
+            background: linear-gradient(90deg, #ed4933 60%, #ff8800 100%);
+            color: #fff !important;
+            border: none;
+            box-shadow: 0 4px 16px rgba(237,73,51,0.15);
+            font-family: 'Montserrat', Arial, sans-serif;
+            letter-spacing: 1px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .button.primary:hover, .button.small:hover {
+            transform: scale(1.07);
+            box-shadow: 0 8px 24px rgba(237,73,51,0.25);
+            background: linear-gradient(90deg, #ff8800 0%, #ed4933 100%);
+        }
+        .spotlight .image img {
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+            transition: transform 0.3s;
+        }
+        .spotlight .image img:hover {
+            transform: scale(1.04) rotate(-2deg);
+        }
+        .spotlight .content {
+            background: rgba(34,34,34,0.7);
+            border-radius: 16px;
+            padding: 2em;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+        }
+        /* Neon effect for headings */
+        h1, h2, h3 {
+            font-family: 'Roboto Mono', monospace;
+            text-shadow: 0 0 8px #ed4933, 0 0 2px #fff;
+        }
+        /* Social icons hover effect */
+        #footer .icons a:hover {
+            color: #ff8800 !important;
+            text-shadow: 0 0 8px #ff8800;
+            transform: scale(1.2);
+            transition: all 0.2s;
+        }
+    </style>
 	</head>
 	<body class="landing is-preload">
 
@@ -52,7 +114,7 @@
 								</p>
 							</div>
 							
-						<a href="#cv" class="more scrolly">View CV</a>
+						<a href="#cv" class="more scrolly button primary">View CV</a>
 					</section>
 
 				<!-- CV -->
