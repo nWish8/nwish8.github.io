@@ -24,9 +24,10 @@
             color: #f3f3f3;
         }
         #banner {
-            background: linear-gradient(120deg, #ed4933 0%, #232526 100%);
+            /* Remove orange gradient, make transparent so wallpaper shows */
+            background: transparent;
             color: #fff;
-            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2);
+            box-shadow: none;
             border-radius: 0 0 40px 40px;
             animation: bannerFadeIn 1.2s ease;
         }
@@ -62,10 +63,10 @@
             padding: 2em;
             box-shadow: 0 4px 24px rgba(0,0,0,0.15);
         }
-        /* Neon effect for headings */
+        /* Revert headings to default style */
         h1, h2, h3 {
             font-family: 'Roboto Mono', monospace;
-            text-shadow: 0 0 8px #ed4933, 0 0 2px #fff;
+            text-shadow: none;
         }
         /* Social icons hover effect */
         #footer .icons a:hover {
