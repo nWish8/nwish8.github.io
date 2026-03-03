@@ -119,17 +119,15 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="inner">
-								<h2>Nick Wishart</h2>
-								<p>
-									Electrical & Electronic Engineer</br>
-								</p>
-								<p>
-									Engineer | Yacht Crew</br>
-								</p>
-							</div>
-							
-						<a href="#cv" class="more scrolly button primary"> View CV</a>
+							<h2>Nick Wishart</h2>
+							<p>
+								Electrical & Electronic Engineer</br>
+							</p>
+							<p>
+								Engineer | Yacht Crew</br>
+							</p>
+							<a href="#cv" class="more scrolly button primary"> View CV</a>
+						</div>
 					</section>
 
 				<!-- CV -->
@@ -145,14 +143,14 @@
 							<div class="cv-container desktop-only">
 								<iframe src="assets/CV_Nick.pdf" width="100%" height="1200px"></iframe>
 							</div>
-							
+
 							<div class="cv-container mobile-only">
 								<iframe src="https://docs.google.com/gview?url=https://nwish8.github.io/assets/CV_Nick.pdf&embedded=true"
 									style="width:100%; height:450px;" frameborder="0">
 								</iframe>
 							</div>
-							
-							
+
+
 						</div>
 					</section>
 
@@ -170,7 +168,7 @@
 								challenges and opportunities.<br /></p>
 							</div>
 						</section>
-						
+
 						<section class="spotlight">
 							<div class="image"><img src="images/pic04.jpg" alt="Progression" /></div>
 							<div class="content">
@@ -192,7 +190,7 @@
 									projects in the engineering and maritime sector. 
 									</p>
 							</div>
-						</section>						
+						</section>
 
 						<section class="spotlight">
 							<div class="image"><img src="images/pic02.jpg" alt="CPT Yachts" /></div>
@@ -204,7 +202,7 @@
 									effectively, and make split-second decisions.</p>
 							</div>
 						</section>
-						
+
 						<section class="spotlight">
 							<div class="image"><img src="images/pic03.jpg" alt="Caves Surfing" /></div>
 							<div class="content">
@@ -216,12 +214,12 @@
 									and rugby, always up for a good race or match.</p>
 							</div>
 						</section>
-						
+
 						<!-- <section class="spotlight">
 							<div class="image"><img src="images/pic04.jpg" alt="Nick Wishart enjoying outdoor activities" /></div>
 							<div class="image"><img src="images/pic05.jpg" alt="Nick Wishart enjoying outdoor activities" /></div>
 						</section> -->
-						
+
 					</section>
 
 				<!-- Contact -->
@@ -257,7 +255,7 @@
 							<li><a href="mailto:nick98w@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Nick Wishart 2025</li>
+							<li>&copy; Nick Wishart 2026</li>
 						</ul>
 					</footer>
 
@@ -280,16 +278,16 @@
 					});
 				}
 			</script>
-			
+
 			<script>
 				function detectDevice() {
 					let desktopContainer = document.querySelector('.desktop-only');
 					let mobileContainer = document.querySelector('.mobile-only');
-			
+
 					if (window.innerWidth <= 768) {
 						desktopContainer.style.display = 'none';
 						mobileContainer.style.display = 'block';
-			
+
 						// Check if the page has been refreshed already
 						if (!sessionStorage.getItem("pageReloaded")) {
 							sessionStorage.setItem("pageReloaded", "true");
@@ -302,12 +300,12 @@
 						mobileContainer.style.display = 'none';
 					}
 				}
-			
+
 				// Ensure script runs only when the DOM is fully loaded
 				document.addEventListener("DOMContentLoaded", detectDevice);
 				window.onload = detectDevice;
 				window.onresize = detectDevice;
 			</script>
-			
+
 	</body>
 </html>
