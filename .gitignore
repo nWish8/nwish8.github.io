@@ -1,0 +1,10 @@
+# Editor / tooling
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Node (arrives with the P1 build tooling)
+node_modules/
+dist/
+.vite/

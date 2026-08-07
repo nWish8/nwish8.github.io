@@ -1,33 +1,14 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <script>
-            function checkPassword() {
-                // Check if the user is already authenticated
-                //if (sessionStorage.getItem("authenticated") !== "true") {
-                    // Prompt for the password
-                    let password = prompt("Enter password to view this page:");
-                    if (password === "0000") {
-                        // Correct password: grant access
-                        sessionStorage.setItem("authenticated", "true");
-                    } else {
-                        // Incorrect password: redirect to home page
-                        alert("Incorrect password! Redirecting to home page.");
-                        window.location.href = "index.html";
-                    }
-                //}
-            }
-
-            // Run the password check before the page loads
-            document.addEventListener("DOMContentLoaded", checkPassword);
-        </script>
-        
         <title>Certificates | Nick Wishart</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <link rel="icon" type="image/png" href="images/anchor.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     </head>
     <body class="landing is-preload">
         <!-- Page Wrapper -->
@@ -43,11 +24,11 @@
                             <div id="menu">
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="index.html/#cv">CV</a></li>
+                                    <li><a href="index.html#cv">CV</a></li>
                                     <li><a href="references.html">References</a></li>
                                     <li><a href="certificates.html">Certificates</a></li>
-                                    <li><a href="index.html/#about">About</a></li>
-                                    <li><a href="index.html/#contact">Contact</a></li>
+                                    <li><a href="index.html#about">About</a></li>
+                                    <li><a href="index.html#contact">Contact</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -75,9 +56,9 @@
                     <div class="content">
                         <h3>---</h3>
                         <p><strong>ENG1 Medical Certificate</strong><br />
-                            Expires: 06 February  2027</p>
-                        <a href="assets/certificates/STCW/ENG1.pdf" target="_blank" class="button small">ENG 1</a>
-                    
+                            Valid to 06 February 2027<br />
+                            <em>Medical certificate &mdash; available on request.</em></p>
+
                         <h3>---</h3>
                         <p><strong>STCW Basic Safety Training</strong><br />
                         Expires: January 2030</p>
@@ -139,42 +120,6 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
-        <script>
-            function copyToClipboard(text) {
-                navigator.clipboard.writeText(text).then(() => {
-                    alert(text + " copied to clipboard!");
-                });
-            }
-        </script>
-        
-        <script>
-            function detectDevice() {
-                let desktopContainer = document.querySelector('.desktop-only');
-                let mobileContainer = document.querySelector('.mobile-only');
-        
-                if (window.innerWidth <= 768) {
-                    desktopContainer.style.display = 'none';
-                    mobileContainer.style.display = 'block';
-        
-                    // Check if the page has been refreshed already
-                    if (!sessionStorage.getItem("pageReloaded")) {
-                        sessionStorage.setItem("pageReloaded", "true");
-                        setTimeout(() => {
-                            location.reload();
-                        }, 5000); // Refresh after 2 seconds
-                    }
-                } else {
-                    desktopContainer.style.display = 'block';
-                    mobileContainer.style.display = 'none';
-                }
-            }
-        
-            // Ensure script runs only when the DOM is fully loaded
-            document.addEventListener("DOMContentLoaded", detectDevice);
-            window.onload = detectDevice;
-            window.onresize = detectDevice;
-        </script>
 
     </body>
 </html>

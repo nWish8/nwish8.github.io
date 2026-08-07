@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Personal documents: reachable by direct link for anyone I send them to,
+# but not surfaced in search results.
+Disallow: /assets/certificates/
+Disallow: /assets/CV_Nick.pdf

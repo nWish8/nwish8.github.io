@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <link rel="icon" type="image/png" href="images/anchor.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     </head>
     <body class="landing is-preload">
         <!-- Page Wrapper -->
@@ -22,11 +24,11 @@
                                     <div id="menu">
                                         <ul>
                                             <li><a href="index.html">Home</a></li>
-                                            <li><a href="index.html/#cv">CV</a></li>
+                                            <li><a href="index.html#cv">CV</a></li>
                                             <li><a href="references.html">References</a></li>
 											<li><a href="certificates.html">Certificates</a></li>
-                                            <li><a href="index.html/#about">About</a></li>
-                                            <li><a href="index.html/#contact">Contact</a></li>
+                                            <li><a href="index.html#about">About</a></li>
+                                            <li><a href="index.html#contact">Contact</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -37,11 +39,9 @@
                 <!-- Banner -->
                     <section id="banner">
                         <div class="inner">
-                            <div class="inner">
-                                <h2>References</h2>
-                            </div>
-                            
-                        <a href="#references" class="more scrolly">See References</a>
+                            <h2>References</h2>
+                            <a href="#references" class="more scrolly">See References</a>
+                        </div>
                     </section>
 
 
@@ -50,31 +50,29 @@
                     <div class="inner">
                         <header class="major">
                             <p>
-                                Below are references from colleagues and supervisors who can vouch for my work.
+                                Colleagues and supervisors who can vouch for my work. Written
+                                letters and referee contact details are available on request.
                             </p>
                         </header>
-                        
+
+                        <!-- Referee contact details are deliberately not published here: they are
+                             third parties' personal data, and posting them publicly exposes them
+                             to scraping. Letters are held privately and shared on request. -->
                         <div class="content">
                             <h3>---</h3>
-                            <p><strong>Odyssey Sailing .Gr</strong><br />
-                            Director, Frances A. Mansfield<br />
-                            Email: info@odysseysailing.gr<br />
-                            Phone: +30 6974659156</p>
-                            <a href="assets/references/NickWishart_Odyssey_Ref.pdf" target="_blank" class="button small">View Letter</a>
-                        
+                            <p><strong>Odyssey Sailing, Greece</strong><br />
+                            Frances A. Mansfield &mdash; Director</p>
+
                             <h3>---</h3>
                             <p><strong>Cape Mushrooms</strong><br />
-                            Owner, Alexander Greig<br />
-                            Email: greig@capemushrooms.co.za<br />
-                            Phone: +27 82 622 8889</p>
-                            <a href="assets/references/NickWishart_CapeMushrooms_Ref.pdf" target="_blank" class="button small">View Letter</a>
-                        
+                            Alexander Greig &mdash; Owner</p>
+
                             <h3>---</h3>
                             <p><strong>Sinapi Biomedical</strong><br />
-                            R&D Manager, Gabriel Bruwer<br />
-                            Email: gabrielb@sinapibiomedical.com<br />
-                            </p>
-                            <a href="assets/references/NickWishart_Sinapi_Ref.pdf" target="_blank" class="button small">View Letter</a>
+                            Gabriel Bruwer &mdash; R&amp;D Manager</p>
+
+                            <h3>---</h3>
+                            <p><a href="mailto:nick98w@gmail.com?subject=Reference%20request" class="button small">Request references</a></p>
                         </div>
                     </div>
                 </section>
@@ -132,43 +130,6 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
-        <script>
-            function copyToClipboard(text) {
-                navigator.clipboard.writeText(text).then(() => {
-                    alert(text + " copied to clipboard!");
-                });
-            }
-        </script>
-        
-        <script>
-            function detectDevice() {
-                let desktopContainer = document.querySelector('.desktop-only');
-                let mobileContainer = document.querySelector('.mobile-only');
-        
-                if (window.innerWidth <= 768) {
-                    desktopContainer.style.display = 'none';
-                    mobileContainer.style.display = 'block';
-        
-                    // Check if the page has been refreshed already
-                    if (!sessionStorage.getItem("pageReloaded")) {
-                        sessionStorage.setItem("pageReloaded", "true");
-                        setTimeout(() => {
-                            location.reload();
-                        }, 5000); // Refresh after 2 seconds
-                    }
-                } else {
-                    desktopContainer.style.display = 'block';
-                    mobileContainer.style.display = 'none';
-                }
-            }
-        
-            // Ensure script runs only when the DOM is fully loaded
-            document.addEventListener("DOMContentLoaded", detectDevice);
-            window.onload = detectDevice;
-            window.onresize = detectDevice;
-        </script>
-        
 
     </body>
 </html>
